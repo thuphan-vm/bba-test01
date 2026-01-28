@@ -25,6 +25,6 @@ function calculate(l1, l2, l3) {
     let totalCoin2 = COIN_LEVEL_1 + COIN_LEVEL_2 + COIN_LEVEL_3;
     let averageCoin2 = totalCoin2 / 3;
     let remainCoin2 = totalCoin2 % 3;
-    return remainCoin2;
+    return remainCoin2; 
 }
 console.log(`2nd way - Remaining coins when total coins devided by 3: ${calculate(COIN_LEVEL_1, COIN_LEVEL_2, COIN_LEVEL_3)}`);
