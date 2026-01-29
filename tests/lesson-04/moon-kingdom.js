@@ -20,7 +20,7 @@ function createCharacters() {
     return { charactersPowerUp, possibleWinners };
 }
 console.log(createCharacters());
-console.log("________________");
+console.log("________________________");
 
 // 2nd way
 function createCharacters2() {
@@ -42,7 +42,7 @@ function createCharacters2() {
     return { charactersPowerUp, possibleWinners };
 }
 console.log(createCharacters2());
-console.log("________________");
+console.log("_____________________________");
 
 /*  Bài 2 */
 const players = [
@@ -53,7 +53,7 @@ const players = [
     { name: "Luigi", score: 900 }
 ]
 
-// 1st way
+// 1st way: for
 function printLeaderboard(players) {
     const sortedPlayers = players.sort((a, b) => b.score - a.score);
 
@@ -72,9 +72,9 @@ function printLeaderboard(players) {
 }
 
 printLeaderboard(players);
-console.log("________________");
+console.log("____________________________");
 
-// 2nd way
+// 2nd way: forEach
 function printLeaderboard2(players) {
     const sortedPlayers = players.sort((a, b) => b.score - a.score);
 
@@ -95,8 +95,8 @@ function printLeaderboard2(players) {
 }
 
 printLeaderboard2(players);
-console.log("________________");
-// 3rd way
+console.log("___________________________");
+// 3rd way: for(let ... in)
 function printLeaderboard3(players) {
     const sortedPlayers = players.sort((a, b) => b.score - a.score);
 
