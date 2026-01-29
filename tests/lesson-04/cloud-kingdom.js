@@ -7,24 +7,37 @@ const COIN_LEVEL_3 = 45;
 
 // 1st way
 // Total coin
-let totalCoin = COIN_LEVEL_1 + COIN_LEVEL_2 + COIN_LEVEL_3;
+const totalCoin = COIN_LEVEL_1 + COIN_LEVEL_2 + COIN_LEVEL_3;
 
 // Average coin
-let averageCoin = totalCoin / 3;
+const averageCoin = totalCoin / 3;
 
 // REMAIN COIN 
-let remainCoin = totalCoin % 3;
+const remainCoin = totalCoin % 3;
 
 // output
 console.log(`Total coins: ${totalCoin}`);
 console.log(`Average coins: ${averageCoin}`);
-console.log(`1st way - Remaining coins when total coins devided by 3: ${remainCoin}`);
+console.log(`Remaining coins when total coins devided by 3: ${remainCoin}`);
+console.log("________________________________");
 
-// 2nd way - creat function
-function calculate(l1, l2, l3) {
-    let totalCoin2 = COIN_LEVEL_1 + COIN_LEVEL_2 + COIN_LEVEL_3;
-    let averageCoin2 = totalCoin2 / 3;
-    let remainCoin2 = totalCoin2 % 3;
-    return remainCoin2; 
+// 2nd way - create function
+function calculateCoin(l1, l2, l3) {
+    const totalCoin2 = l1 + l2 + l3;
+    const averageCoin2 = totalCoin2 / 3;
+    const remainCoin2 = totalCoin2 % 3;
+    console.log(`Total coins: ${totalCoin2}`);
+    console.log(`Average coins: ${averageCoin2}`);
+    console.log(`Remaining coins when total coins devided by 3: ${remainCoin2}`);
+    console.log("___________________________");
 }
-console.log(`2nd way - Remaining coins when total coins devided by 3: ${calculate(COIN_LEVEL_1, COIN_LEVEL_2, COIN_LEVEL_3)}`);
+calculateCoin(COIN_LEVEL_1, COIN_LEVEL_2, COIN_LEVEL_3);
+
+// 3rd way - use array, utils reduce
+const coinArray = [COIN_LEVEL_1, COIN_LEVEL_2, COIN_LEVEL_3];
+const totalCoin3 = coinArray.reduce((sum, coin) => sum + coin, 0);
+const averageCoin3 = totalCoin3 / coinArray.length;
+const remainCoin3 = totalCoin3 % coinArray.length;
+console.log(`Total coins: ${totalCoin3}`);
+console.log(`Average coins: ${averageCoin3}`);
+console.log(`Remaining coins when total coins devided by 3: ${remainCoin3}`);
