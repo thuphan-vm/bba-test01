@@ -1,4 +1,4 @@
-let powerUp = "mushroom";
+let powerUp = 'mushroom';
 let effect = '';
 
 // 1st way: if ... else
@@ -43,23 +43,23 @@ let effect3 = powerUp === 'mushroom' ? 'Mario becomes Super!' :
 console.log(effect3);
 
 // 4th way: swith ... case
-let effect4;
+let effect4 = "";
 
 switch (powerUp) {
     case "mushroom":
-        effect = "Mario becomes Super!";
+        effect4 = "Mario becomes Super!";
         break;
     case "flower":
-        effect = "Mario can shoot fireballs!";
+        effect4 = "Mario can shoot fireballs!";
         break;
     case "star":
-        effect = "Mario is invincible!";
+        effect4 = "Mario is invincible!";
         break;
     case "none":
-        effect = "Mario is normal";
+        effect4 = "Mario is normal";
         break;
     default:
-        effect = "Unknown power-up";
+        effect4 = "Unknown power-up";
 }
 
 console.log(effect4);
